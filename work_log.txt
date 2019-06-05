@@ -58,3 +58,7 @@ POSTING FEATURE
 
 EXPLORE
 39) There should be a way to explore other users now that Users are fleshed out. 
+
+DEPLOY WITH HEROKU
+40) login to heroku cli
+41) make sure git is set up 
