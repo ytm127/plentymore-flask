@@ -1,0 +1,60 @@
+HELLO WORLD:
+1) Get virtualenv going. Activate it. 
+2) Install flask and other dependencies 
+3) mkdir app / touch '__init__.py', touch 'routes.py'
+4) create a file at top level as the app access point.
+5) Make sure to export FLASK_APP=appname.py so you can 'flask run'
+
+TEMPLATES:
+6) return templates in routes. app/mkdir templates. Remember to use inheritance 
+
+WEB FORMS: 
+7) use web forms next --> WTForms
+8) Beacuse we're using an extention, we need to create a Config file to keep things organized 
+9) Once configuration is taken care of, create a module called forms to keep all information about forms
+    -   each different form has a class 
+10) Once the configuration stuff is done, create a login.html template to render the form (view)
+11) Now go into routes to take care of actually receiving the data (logic)
+
+DATABASE:
+12) First, we need an ORM --> SQLAlchemy. Install it 
+13) Second, we need a way to migrate the DB --> flask-migrate. install it 
+-   Rememeber, SQLite does not need a server. Just runs on the disk. 
+-   Pay extra attention here because configuring the db is tricky and very important 
+14) Make the necessary additions in the init file 
+models --> represents the data that will be stored in the db 
+15) create a models module like you made the forms module 
+16) Once a model is made, do migration. We need a migration repository. Inititalize it. 
+17) Then, migrate and upgrade. 
+18) Optional: configure flask shell setting in the main file for easy access to db in the terminal 
+
+USER LOGIN/LOGOUT/REGISTRATION 
+19) password hashing. Use Werkzeug package. This is already a included in Flask. No need to install. Test it out in termainl.
+20) implement hash generation and check in model. Test it out in terminal before moving on.
+21) Flask-Login extention to manage login state. Install it. 
+22) For the implementation, use the UserMixin. Because it is so common, it is already done for you.
+23) Need to implement the User Loader function. Know why. Then go into routes and implement proper login 
+24) Impelement logout 
+25) Implement login requirement. Which means you need to set login_view as well. It's a flask-login thing 
+26) Now create the actual registration view. Create a registration form, a registration template, and handle view. 
+
+PROFILE
+27) Create a profile view in routes that dynamcially adds the username 
+28) Create a user template 
+29) expose it in base template 
+30) If you want, make it so that it shows a picture 
+31) About me attribute. It's a form, so make a new class in forms, create a template for editing about me, and expose it somehwere. probably the user page.
+
+DEBUG MODE 
+32) Enable debug mode for auto server refresh and help with debugging
+33) create an error module for custom error pages. 
+34) create error templates 404, 500 etc. 
+35) Error notification by email. Keeping an error log. Pretty tedious. BARF.
+
+POSTING FEATURE
+36) Make a post form 
+37) Render that template somewhere 
+38) Expose it in the views (routes)
+
+EXPLORE
+39) There should be a way to explore other users now that Users are fleshed out. 

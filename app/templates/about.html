@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+<div class="container">
+        <h1>About</h1><br>
+        <div class="jumbotron">
+                <h2>PlentyMore is a place where you can share your extra food with the people in your community.</h2><br>
+                <h3>Do you have food leftover from your party? Some extra fruits and vegetables from the farmer's market? Some pastries left from your morning meeting?</h3>
+                <br>
+                <h3><a href="{{ url_for('login') }}">Join</a> PlentyMore to share it with hungry people in your community! </h3>
+        </div>
+</div>
+{% endblock %}

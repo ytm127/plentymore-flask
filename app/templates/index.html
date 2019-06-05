@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    <div class="container">
+        {% if current_user.is_anonymous %}
+            <div class="jumbotron" style="text-align:center">
+                    <h2><b>40 million</b> people lived in food-insecure households.</h2>
+                    <h3>You can help.</h3><br>
+                    <small>According to USDA Economic Research Services (2017)</small>
+            </div>
+            <div style="text-align:center">
+                <h3>Fight food insecurity as a community.</h3>
+                <p>You can help fight hunger in your community. Do your part help fight food insecurity.</p><br>
+                <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg" role="button">Start sharing your food</a>
+            </div>
+        {% else %}
+            <!-- <form action="" method="POST">
+                {{ form.hidden_tag() }}
+                <h2>
+                    {{ form.post.label }} 
+                </h2>    
+                <br>
+                <p>
+                    {{ form.post(size = 140) }}
+                    {% for error in form.post.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+                <br>
+                <a href="#" class="btn" role="button">{{ form.submit() }}</a>
+            </form> -->
+            <div class="jumbotron" style="text-align:center">
+                <h2><b>40 million</b> people lived in food-insecure households.</h2>
+                <h3>You can help.</h3><br>
+                <small>According to USDA Economic Research Services (2017)</small>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    {{ wtf.quick_form(form) }}
+                </div>
+            </div>
+            <br><br><hr>
+            <!-- display posts here  -->
+            {% for post in posts %}
+                {% include '_post.html' %}
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}
+
