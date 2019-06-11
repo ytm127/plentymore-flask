@@ -68,3 +68,9 @@ RESTRUCTURE THE FILES TO ALLOW FOR EASIER EXTENTION AND MAINTENANCE
 DEPLOY
 44) Use heroku 
 
+*** THINGS TO WORK On
+1) Profile page logic
+2) Email feature
+3) Really try to understand deployment. Some stuff was hairy and a bit hard to grasp.
+4) The restructuring of the codebase. I skipped this part. Works for this small application. 
+
