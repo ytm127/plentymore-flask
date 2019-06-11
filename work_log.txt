@@ -65,4 +65,6 @@ RESTRUCTURE THE FILES TO ALLOW FOR EASIER EXTENTION AND MAINTENANCE
 42) Use the application factory function.
 43) Actually, i don't understand it. Skip it for now. 
 
+DEPLOY
+44) Use heroku 
 
