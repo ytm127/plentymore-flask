@@ -60,5 +60,9 @@ EXPLORE
 39) There should be a way to explore other users now that Users are fleshed out. 
 
 RESTRUCTURE THE FILES TO ALLOW FOR EASIER EXTENTION AND MAINTENANCE
-40) Use the Blueprints feature of flask 
-41) Use the application factory function
+40) branch off because it's smart to do
+41) Use the Blueprints feature of flask for DRY. Think of blueprints as componenents basically that can be reused.
+42) Use the application factory function.
+43) Actually, i don't understand it. Skip it for now. 
+
+
